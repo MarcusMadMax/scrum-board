@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rowdies:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,177 @@
   list-style-type: none;
 }
 
-header h1 {
-  font-size: 2em;
-  color: green;
+.wrap {
+  position: relative;
+  width: 70vw;
+  margin: 10em auto;
+  background: #71BBD9;
+}
+
+.wrap header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rowdies', cursive;
+}
+
+.wrap header h1 {
+  font-size: 3em;
+  color: #402837;
+  width: 100%;
+  text-align: center;
+}
+
+.wrap header .input {
+  background: #402837;
+}
+
+.wrap header .input form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap header .input form .formGroup {
+  margin: .5em;
+  background: #2180A6;
+}
+
+.wrap header .input form .formGroup input[type='text'] {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  background: #2180A6;
+  font-family: 'Indie Flower', cursive;
+}
+
+.wrap header .input form .formGroup input[type='text']:focus {
+  outline: none;
+}
+
+.wrap header .input form .formGroup select {
+  background: transparent;
+  font-size: 1.5em;
+  color: #402837;
+  font-family: 'Indie Flower', cursive;
+  cursor: pointer;
+}
+
+.wrap header .input form .formGroup select:focus {
+  outline: none;
+}
+
+.wrap header .input form .formGroup ::-webkit-input-placeholder {
+  color: #402837;
+}
+
+.wrap header .input form .formGroup :-ms-input-placeholder {
+  color: #402837;
+}
+
+.wrap header .input form .formGroup ::-ms-input-placeholder {
+  color: #402837;
+}
+
+.wrap header .input form .formGroup ::placeholder {
+  color: #402837;
+}
+
+.wrap header .input form .dueColor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: .75em;
+}
+
+.wrap header .input form button {
+  position: relative;
+  color: #402837;
+  width: 50%;
+  font-size: 1em;
+  margin: 1em auto;
+  padding: .35em;
+  background: #2180A6;
+  border-radius: .5em;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+}
+
+.wrap header .input form button:hover {
+  color: white;
+}
+
+.wrap main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrap main .entry {
+  color: #402837;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap main .entry:nth-child(odd) {
+  background: rgba(33, 128, 166, 0.45);
+  border-right: 2px solid #402837;
+}
+
+.wrap main .entry:nth-child(even) {
+  background: rgba(33, 128, 166, 0.75);
+  border-right: 2px solid #402837;
+}
+
+.wrap main .entry:last-child {
+  border: none;
+}
+
+.wrap main .entry h1 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  height: 3.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid #402837;
+}
+
+.wrap main .entry p {
+  background: #71BBD9;
+  margin: 2em;
+  padding: 1em;
 }
 /*# sourceMappingURL=App.css.map */

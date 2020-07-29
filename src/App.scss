@@ -1,3 +1,11 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rowdies:wght@300;400&display=swap');
+
+$base-color: #71BBD9;
+$subtle-color: #2180A6;
+$highlight-color: #D93A2B;
+$text-color: #402837;
+
 *{
   margin: 0;
   padding: 0;
@@ -5,10 +13,144 @@
   list-style-type: none;
 }
 
-header{
+.wrap{
+  position: relative;
+  width: 70vw;
+  margin: 10em auto;
+  background: $base-color;
 
-  h1{
-    font-size: 2em;
-    color: green;
+  header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    font-family: 'Rowdies', cursive;
+
+    h1{
+      font-size: 3em;
+      color: $text-color;
+      width: 100%;
+      text-align: center;
+    }
+
+    .input{
+      background: $text-color;
+
+      form{
+        display: flex;
+        flex-direction: column;
+
+        .formGroup{
+          margin: .5em;
+          background: $subtle-color;
+
+          input[type='text']{
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+            background: $subtle-color;
+            font-family: 'Indie Flower', cursive;
+
+            &:focus{
+              outline: none;
+            }
+          }
+
+          select{
+            background: transparent;
+            font-size: 1.5em;
+            color: $text-color;
+            font-family: 'Indie Flower', cursive;
+            cursor: pointer;
+
+            &:focus{
+              outline: none;
+            }
+          }
+
+          ::placeholder{
+            color: $text-color;
+          }
+        }
+
+        .dueColor{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: .75em;
+        }
+
+        button{
+          position: relative;
+          color: $text-color;
+          width: 50%;
+          font-size: 1em;
+          margin: 1em auto;
+          padding: .35em;
+          background: $subtle-color;
+          border-radius: .5em;
+          cursor: pointer;
+          font-family: 'Indie Flower', cursive;
+
+          &:hover{
+            color: white;
+          }
+        }
+      } 
+    }
+  }
+
+  main{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+
+    .entry{
+      color: $text-color;
+      flex: 1 0 25%;
+      box-sizing: border-box;
+
+      &:nth-child(odd){
+        background: rgba($color: $subtle-color, $alpha: .45);
+        border-right: 2px solid $text-color;
+      }
+
+      &:nth-child(even){
+        background: rgba($color: $subtle-color, $alpha: .75);
+        border-right: 2px solid $text-color;
+      }
+
+      &:last-child{
+        border: none;
+      }
+
+      // ::after, ::before{
+      //   content: '';
+      //   position: absolute;
+      //   width: 2px;
+      //   height: 100%;
+      //   top: 0;
+      //   right: 33%;
+      //   background: $text-color;
+      // }
+
+      h1{
+        text-transform: uppercase;
+        font-size: 1.25em;
+        height: 3.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid $text-color;
+      }
+
+      p{
+        background: $base-color;
+        margin: 2em;
+        padding: 1em;
+      }
+    }
   }
 }
