@@ -54,7 +54,12 @@
 
 .wrap header .input form .formGroup {
   margin: .5em;
+  padding-left: .5em;
   background: #2180A6;
+}
+
+.wrap header .input form .formGroup label {
+  color: #402837;
 }
 
 .wrap header .input form .formGroup input[type='text'] {
@@ -66,6 +71,18 @@
 }
 
 .wrap header .input form .formGroup input[type='text']:focus {
+  outline: none;
+}
+
+.wrap header .input form .formGroup input[type='date'] {
+  background-color: #2180A6;
+  color: #402837;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.wrap header .input form .formGroup input[type='date']:focus {
   outline: none;
 }
 
@@ -123,6 +140,10 @@
   font-family: 'Indie Flower', cursive;
 }
 
+.wrap header .input form button:focus {
+  outline: none;
+}
+
 .wrap header .input form button:hover {
   color: white;
 }
@@ -175,9 +196,19 @@
   border-bottom: 2px solid #402837;
 }
 
-.wrap main .entry p {
+.wrap main .entry .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #71BBD9;
   margin: 2em;
   padding: 1em;
+  line-height: 1.5em;
+}
+
+.wrap main .entry .task i {
+  position: relative;
+  z-index: 50;
+  border: 1px solid red;
 }
 /*# sourceMappingURL=App.css.map */

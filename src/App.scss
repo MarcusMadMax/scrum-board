@@ -44,7 +44,14 @@ $text-color: #402837;
 
         .formGroup{
           margin: .5em;
+          padding-left: .5em;
           background: $subtle-color;
+
+          label{
+            color: $text-color;
+            // padding: .25em 0 0 1em;
+            // box-sizing: border-box;
+          }
 
           input[type='text']{
             font-size: 1.5em;
@@ -52,6 +59,18 @@ $text-color: #402837;
             text-align: center;
             background: $subtle-color;
             font-family: 'Indie Flower', cursive;
+
+            &:focus{
+              outline: none;
+            }
+          }
+
+          input[type='date']{
+            background-color: $subtle-color;
+            color: $text-color;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.5em;
+            width: 100%;
 
             &:focus{
               outline: none;
@@ -94,6 +113,10 @@ $text-color: #402837;
           cursor: pointer;
           font-family: 'Indie Flower', cursive;
 
+          &:focus{
+            outline: none;
+          }
+
           &:hover{
             color: white;
           }
@@ -126,16 +149,6 @@ $text-color: #402837;
         border: none;
       }
 
-      // ::after, ::before{
-      //   content: '';
-      //   position: absolute;
-      //   width: 2px;
-      //   height: 100%;
-      //   top: 0;
-      //   right: 33%;
-      //   background: $text-color;
-      // }
-
       h1{
         text-transform: uppercase;
         font-size: 1.25em;
@@ -146,10 +159,18 @@ $text-color: #402837;
         border-bottom: 2px solid $text-color;
       }
 
-      p{
-        background: $base-color;
-        margin: 2em;
-        padding: 1em;
+      .task{
+        display: flex;
+          background: $base-color;
+          margin: 2em;
+          padding: 1em;
+          line-height: 1.5em;
+
+          i{
+            position: relative;
+            z-index: 50;
+            border: 1px solid red;
+          }
       }
     }
   }
