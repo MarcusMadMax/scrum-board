@@ -197,18 +197,25 @@
 }
 
 .wrap main .entry .task {
+  background: #71BBD9;
+  margin: 1em;
+  padding: 1em;
+  line-height: 1em;
+  font-size: 1.25em;
+  color: #402837;
+  font-family: 'Indie Flower', cursive;
+  text-transform: uppercase;
+}
+
+.wrap main .entry .task .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #71BBD9;
-  margin: 2em;
-  padding: 1em;
-  line-height: 1.5em;
-}
-
-.wrap main .entry .task i {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
-  z-index: 50;
-  border: 1px solid red;
+  color: #402837;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */

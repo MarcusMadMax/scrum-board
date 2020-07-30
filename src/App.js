@@ -12,6 +12,7 @@ class App extends Component {
       newStoryInputValue: '',
       newTaskStatusValue: '',
       newTaskDateValue: '',
+      newTaskColor: '',
     }
 
   }
@@ -26,6 +27,10 @@ class App extends Component {
 
   handleDatechange = (e) => {
     this.setState({ newTaskDateValue: e.target.value })
+  }
+
+  handleColorchange = (e) => {
+    this.setState({ newTaskColor: e.target.value })
   }
 
   handleAddStory = (e) => {
@@ -54,6 +59,12 @@ class App extends Component {
       return item.id !== deleteEntry
     })
     this.setState({ newStoryProperty: filteredStories })
+  }
+
+  handleSetColor = (e) => {
+    console.log(e.target.value)
+    var setColor = e.target.value
+    this.setState({newStoryProperty: setColor})
   }
 
   render() {
@@ -86,7 +97,8 @@ class App extends Component {
 
                 <div className="formGroup">
                   <label htmlFor="color">Color</label>
-                  <select name="color" id="color">
+                  <select name="color" id="color" onChange={this.handleSetColor}>
+                    <option value="choose">Choose a color</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
                     <option value="blue">Blue</option>
@@ -109,7 +121,7 @@ class App extends Component {
                 })
                 .map((task) => {
                   return (
-                    <div key={task.id}><div><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
+                  <div className="task" key={task.id}><div className="icons"><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
                   )
                 })
             }
@@ -137,7 +149,7 @@ class App extends Component {
                 })
                 .map((task) => {
                   return (
-                    <div key={task.id}><div><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
+                    <div className="task" key={task.id}><div className="icons"><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
                   )
                 })
             }
@@ -151,7 +163,7 @@ class App extends Component {
                 })
                 .map((task) => {
                   return (
-                      <div key={task.id}><div><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
+                      <div className="task" key={task.id}><div className="icons"><i className="fas fa-edit"></i><i className="fas fa-times-circle" id={task.id} onClick={this.handleDelete}></i></div><br />{task.text}<br />Due Date<br />{task.date}</div>
                   )
                 })
             }

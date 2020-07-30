@@ -49,8 +49,6 @@ $text-color: #402837;
 
           label{
             color: $text-color;
-            // padding: .25em 0 0 1em;
-            // box-sizing: border-box;
           }
 
           input[type='text']{
@@ -160,16 +158,21 @@ $text-color: #402837;
       }
 
       .task{
-        display: flex;
-          background: $base-color;
-          margin: 2em;
-          padding: 1em;
-          line-height: 1.5em;
+        background: $base-color;
+        margin: 1em;
+        padding: 1em;
+        line-height: 1em;
+        font-size: 1.25em;
+        color: $text-color;
+        font-family: 'Indie Flower', cursive;
+        text-transform: uppercase;
 
-          i{
+          .icons{
+            display: flex;
+            justify-content: space-between;
             position: relative;
-            z-index: 50;
-            border: 1px solid red;
+            color: $text-color;
+            cursor: pointer;
           }
       }
     }
