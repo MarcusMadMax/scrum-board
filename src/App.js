@@ -13,6 +13,7 @@ class App extends Component {
       newTaskStatusValue: '',
       newTaskDateValue: '',
       newTaskColor: '',
+      myColors: handleSetColor,
     }
 
   }
@@ -64,7 +65,6 @@ class App extends Component {
   handleSetColor = (e) => {
     console.log(e.target.value)
     var setColor = e.target.value
-    this.setState({newStoryProperty: setColor})
   }
 
   render() {
